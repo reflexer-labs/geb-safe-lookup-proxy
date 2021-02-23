@@ -4,11 +4,13 @@ import "ds-test/test.sol";
 
 import "./GebSafeLookupProxy.sol";
 
+import {ProxyCalls} from "geb-proxy-actions/test/GebProxyActions.t.sol";
+
 contract GebSafeLookupProxyTest is DSTest {
-    GebSafeLookupProxy proxy;
+    GebSafeLookupProxy safeLookupProxy;
 
     function setUp() public {
-        proxy = new GebSafeLookupProxy();
+        safeLookupProxy = new GebSafeLookupProxy();
     }
 
     function testFail_basic_sanity() public {
